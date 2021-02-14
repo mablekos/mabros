@@ -1,0 +1,42 @@
+#wrapper {
+  display: flex;
+}
+
+body {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  cursor: pointer;
+}
+
+tr {
+  display: flex;
+}
+
+td {
+  display: flex;
+  padding: 0.625rem;
+  min-width: 3.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagelogo {
+  width: 7.5rem;
+  height: auto;
+  cursor: pointer;
+}
+
+.flags {
+  width: 2.3125rem;
+  height: auto;
+  padding-bottom: 10px;
+}
+
+.flagcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
