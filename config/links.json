@@ -1,0 +1,21 @@
+[
+  {
+    "language": "English",
+    "icon": "img/flags/united_kingdom.png",
+    "medium": {
+      "print": [],
+      "ebook": [
+        {
+          "service": "Amazon Kindle",
+          "image": "img/amazon_kindle.png",
+          "url": "https://www.amazon.co.uk/dp/B08VN9PLV4"
+        },
+        {
+          "service": "Amazon Books",
+          "image": "img/amazon_books.png",
+          "url": "https://books.apple.com/gb/book/max-the-colourful-dragon/id1552584750"
+        }
+      ]
+    }
+  }
+]
