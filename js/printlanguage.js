@@ -23,63 +23,104 @@ const languages = [
     language: "Greek",
     icon: "img/flags/greece.svg",
     medium: {
-      print: [
-        {
-          service: "Amazon Kindle",
-          image: "img/amazon_kindle.png",
-          url: "https://www.amazon.co.uk/dp/B08VN9PLV4",
-        },
-        {
-          service: "Amazon Books",
-          image: "img/apple_books.png",
-          url:
-            "https://books.apple.com/gb/book/max-the-colourful-dragon/id1552584750",
-        },
-      ],
-      ebook: [
-        {
-          service: "Amazon Kindle",
-          image: "img/amazon_kindle.png",
-          url: "https://www.amazon.co.uk/dp/B08VN9PLV4",
-        },
-        {
-          service: "Amazon Books",
-          image: "img/apple_books.png",
-          url:
-            "https://books.apple.com/gb/book/max-the-colourful-dragon/id1552584750",
-        },
-      ],
+      print: [],
+      ebook: [],
+    },
+  },
+  {
+    language: "German",
+    icon: "img/flags/germany.svg",
+    medium: {
+      print: [],
+      ebook: [],
+    },
+  },
+  {
+    language: "Polish",
+    icon: "img/flags/republic-of-poland.svg",
+    medium: {
+      print: [],
+      ebook: [],
+    },
+  },
+  {
+    language: "French",
+    icon: "img/flags/france.svg",
+    medium: {
+      print: [],
+      ebook: [],
+    },
+  },
+  {
+    language: "Spanish",
+    icon: "img/flags/spain.svg",
+    medium: {
+      print: [],
+      ebook: [],
+    },
+  },
+  {
+    language: "Italian",
+    icon: "img/flags/italy.svg",
+    medium: {
+      print: [],
+      ebook: [],
+    },
+  },
+  {
+    language: "Arabic",
+    icon: "img/flags/algeria.svg",
+    medium: {
+      print: [],
+      ebook: [],
     },
   },
 ];
 
 function printLanguage() {
   const languagePrint = [];
+  const notifymeUrl = "http://eepurl.com/hoK8Jb";
 
   languages.forEach((link) => {
-    const printMedium = link.medium.print
-      .map(
-        (printlink) =>
-          `<td>
-      <a href="${printlink.url}" target="_blank">
-      <img class="imagelogo" src="${printlink.image}"/>
-      </a>
-    </td>`
-      )
-      .join(" ");
+    const printMedium =
+      link?.medium?.print.length > 0
+        ? link.medium.print
+            .map((printlink) => {
+              if (printlink.url) {
+                return `<td>
+            <a href="${printlink.url}" target="_blank">
+            <img class="imagelogo" src="${printlink.image}"/>
+            </a>
+          </td>`;
+              }
+            })
+            .join(" ")
+        : `<td>
+      <a href="${notifymeUrl}" target="_blank">
+          <img class="imagelogo" src="img/notifyme.png"/>
+          </a>
+        </td>`;
 
     console.log({ link, printMedium });
 
-    const ebookMedium = link.medium.ebook
-      .map(
-        (ebooklink) =>
-          `<td>
-      <a href="${ebooklink.url}" target="_blank">
-      <img class="imagelogo" src="${ebooklink.image}"/>
-      </a>
-    </td>`
-      )
-      .join(" ");
+    const ebookMedium =
+      link?.medium?.ebook.length > 0
+        ? link?.medium?.ebook
+            .map((ebooklink) => {
+              if (ebooklink.url) {
+                return `<td>
+            <a href="${ebooklink.url}" target="_blank">
+            <img class="imagelogo" src="${ebooklink.image}"/>
+            </a>
+          </td>`;
+              }
+            })
+            .join(" ")
+        : `<td>
+      <a href="${notifymeUrl}" target="_blank">
+        <img class="imagelogo" src="img/notifyme.png"/>
+        </a>
+      </td>`;
 
     languagePrint.push(
       `
