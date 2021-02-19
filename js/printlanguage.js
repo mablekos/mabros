@@ -16,6 +16,11 @@ const languages = [
           url:
             "https://books.apple.com/gb/book/max-the-colourful-dragon/id1552584750",
         },
+        {
+          service: "Google Play Books",
+          image: "img/google_play.png",
+          url: "https://play.google.com/store/books/details?id=KakaEAAAQBAJ",
+        },
       ],
     },
   },
