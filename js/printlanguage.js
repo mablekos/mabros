@@ -3,7 +3,14 @@ const languages = [
     language: "English",
     icon: "img/flags/united-kingdom.svg",
     medium: {
-      print: [],
+      print: [
+        {
+          service: "Amazon",
+          image: "img/amazon_books.png",
+          url:
+            "https://www.amazon.co.uk/dp/183831220X/ref=cm_sw_em_r_mt_dp_825M3VTGZEBD58WMP49N",
+        },
+      ],
       ebook: [
         {
           service: "Amazon Kindle",
